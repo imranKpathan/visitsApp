@@ -14,4 +14,6 @@ services:
     # Right port number means port number inside the container.
     ports:
       - "4001:8081"
+    # Specifying restart policy - Docker will attempt to automatically restart the container if it goes down.
+    restart: always
 # we don't need to specify networks section. By default, all containers in this will share the same network.
