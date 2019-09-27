@@ -1,0 +1,17 @@
+# Version is mandatory. Each version provides different set of features.
+version: "3"
+
+# In docker-compose file, Services == Containers
+services:
+  redis-server:
+    # Specifying image will make docker to build a container from the image given.
+    image: 'redis'
+  node-app:
+    # Specifying build will make docker to build a container from the instructions in the docker file.
+    build: .
+    # Ports that need to opened up so that we can connect to container from host.
+    # Left port number means port number on the host.
+    # Right port number means port number inside the container.
+    ports:
+      - "4001:8081"
+# we don't need to specify networks section. By default, all containers in this will share the same network.
