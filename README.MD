@@ -31,3 +31,13 @@ A Simple Web App developed using NodeJS and Redis. Deployed using Docker.
     - 'always' - Attempt to restart the container if it stops for any reason.
     - 'on-failure' - Only restart container if the container stors with a error code.
     - 'unless-stopped' - Always restart a container unless it was stopped manually.
+
+## Build Instructions
+- Build and Start the containers for the first time using: 'docker-compose up --build -d'
+- Start containers without building using: 'docker-compose -d'
+- Verify the application by launching a browser and going to 'http://localhost:4001'
+- Stop the application using 'docker-compose down'
+
+## Container Status Checking
+- Check status of the containers by going to the working directory (where docker-compose.yml) is available.
+- Check status using 'docker-compose ps'
