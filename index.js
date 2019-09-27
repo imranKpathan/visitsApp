@@ -10,7 +10,7 @@ client.set('visits', 0);
 app.get('/', (req, res) => {
     client.get('visits', (err, visits) => {
         res.send('Number of Visits To The App:: ' + visits);
-        client.set('visits', parent(visits) + 1);
+        client.set('visits', parseInt(visits) + 1);
     });
 });
 
